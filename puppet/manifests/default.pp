@@ -201,6 +201,11 @@ class memcached {
     }
 }
 
+class { 'elasticsearch':
+   package_url => 'https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-0.90.7.deb',
+   java_install => true
+ }
+
 class { 'apt':
     always_apt_update    => true
 }
